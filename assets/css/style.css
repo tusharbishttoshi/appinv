@@ -3,6 +3,7 @@
     --grayColor: #909090;
     --starColor: #F9B811;
     --borderColor: rgba(144,144,144,0.3);
+    --darkColor: #454545;
 }
 *{
     padding: 0;
@@ -114,8 +115,17 @@ justify-content: space-between;
 max-width: 50%;
 flex: 0 0 auto;
 }
-.col-lg-6{
-max-width: 50%;
+.col-lg-5{
+    max-width: 45%;
+    flex: 0 0 auto;
+}
+.col-lg-7{
+    max-width: 55%;
+    flex: 0 0 auto;
+}
+.col-lg-3{
+max-width: 25%;
+width: 25%;
 flex: 0 0 auto;
 }
 .my-auto{
@@ -127,6 +137,9 @@ margin-top: 3rem;
 .mt-4{
 margin-top: 1.5rem;
 }
+.mt-3{
+    margin-top: 1rem;
+    }
 .my-4{
 margin: 1.5rem 0;
 }
@@ -219,6 +232,13 @@ border-radius: 0.5rem;
 position: relative;
 display: flex;
 align-items: center;
+transition: 0.3s ease-in;
+}
+.dropdown:hover > .dropdown::after{
+    content: '\f107';
+    transform: rotate(180);
+    color: var(--primaryColor)
+
 }
 .dropdown::after{
 content: '\f107';
@@ -240,6 +260,7 @@ background: #fff;
 border: 0.5px solid var(--borderColor);
 padding: 1rem 0;
 border-radius: 0.25rem;
+z-index: 99;
 }
 .dropdown-menu ul{
 display: grid!important;
@@ -357,6 +378,9 @@ color: var(--grayColor);
 .h-100{
     height: 100%;
 }
+.w-100{
+    width: 100%;
+}
 .col-lg-9{
     width: 75%;
     max-width: 75%;
@@ -404,4 +428,164 @@ color: var(--grayColor);
 }
 .pt-3{
     padding-top: 1rem;
+}
+.slider-button{
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    border: 1px solid var(--borderColor);
+    background: #fff;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.slider-button:hover{
+    background: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+.slider-button:hover i{
+    color: #fff;
+}
+.justify-content-end{
+    justify-content: end;
+}
+.me-3{
+    margin-right: 1rem;
+}
+.display-4{
+    font-size: 3rem;
+}
+.unforgotable p{
+    font-family: 'CircularStd-Book';
+    font-size: 1.1rem;
+    color: var(--grayColor);
+}
+.px-10{
+    padding: 0 10px;
+}
+.ps-0{
+    padding-left: 0;
+}
+.pe-0{
+    padding-right: 0;
+}
+.pe-5{
+    padding-right: 3rem;
+}
+.BannerCardunforg{
+    position: absolute;
+    top: 2rem;
+    /* display: flex; */
+    border-radius: 8px;
+    justify-content: space-around;
+    width: auto;
+    font-family: 'CircularStd-Book';
+    left: -1.5rem;
+    }
+    .BannerCardunforg p{
+    padding-top: 0.75rem;
+    color: #000;
+    }
+    .BannerCardunforg p span{
+        color: var(--primaryColor);
+    }
+    .BannerCardunforg img{
+        border-radius: 50px;
+        transition: 0.2s ease-in;
+        cursor: pointer;
+    }
+    .BannerCardunforg img:hover{
+        position: relative;
+        top: -5px;
+    }
+    .BannerCardunforg img:first-child{
+        animation: lightUp 1s infinite ease-in-out;
+        position: relative;
+    }
+    .BannerCardunforg img:nth-child(2){
+        margin-left: -1rem;
+        position: relative;
+        z-index: 2;
+        animation: lightUp 1s infinite ease-in-out 0.33s;
+    }
+    @keyframes lightUp {
+        0%{
+            top: 0;
+        }
+        100%{
+            top: -5px;
+        }
+    }
+    .BannerCardunforg img:nth-child(3){
+        margin-left: -1rem;
+        position: relative;
+        z-index: 3;
+        animation: lightUp 1s infinite ease-in-out 0.66s;
+    }
+    .fs-5{
+        font-size: 1.25rem;
+    }
+    .unforgotableBg{
+        background: url('../images/Ellipse.svg');
+        background-repeat: no-repeat;
+        background-size: 75%;
+        background-position: center;
+    }
+    .unforgotable .first,.unforgotable .second, .unforgotable .third{
+        position: relative;
+        padding-left: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .unforgotable .first::before, .unforgotable .second::before, .unforgotable .third::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        font-family: 'CircularStd-Bold';
+        color: #fff;
+        background: var(--primaryColor);
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        font-size: 1rem;
+    }
+    .unforgotable .firstSub::before{
+        content: '1';
+    }
+    .unforgotable .secondSub::before{
+        content: '2';
+    }
+    .unforgotable .thirdSub::before{
+        content: '3';
+    }
+.loginBtn, .signBtn{
+    border: 2px solid var(--borderColor);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+}    
+.signBtn{
+    background-color: var(--darkColor);
+    border-color: var(--darkColor);
+    margin-left: 0.75rem;
+    color: #fff;
+}
+.signBtn:hover{
+    background-color: transparent;
+    color: #000;
+}
+.loginBtn{
+    color: var(--darkColor);
+}
+.loginBtn:hover{
+    background: var(--primaryColor);
+    border-color: var(--primaryColor);
+    color: #fff;
 }
