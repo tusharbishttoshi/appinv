@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <style>
+        :root{
+            --primaryColor: #35AFF4;
+            --grayColor: #909090;
+            --borderColor: rgba(144,144,144,0.3);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+                max-width: 1320px;
+                margin: auto;
+            }
+        @media only screen and (min-width: 1400px) {
+            .container{
+                max-width: 1320px;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+            .container{
+                max-width: 1140px;
+            }
+        }
+        @media only screen and (max-width: 992px) {
+            .container{
+                max-width: 960px;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .container{
+                max-width: 720px;
+            }
+        }
+        @media only screen and (max-width: 576px) {
+            .container{
+                max-width: 540px;
+            }
+        }
+        @media only screen and (max-width: 575px) {
+            .container{
+                max-width: 100%;
+            }
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            font-family: 'CircularStd-Book';
+        }
+        nav ul{
+            display: flex;
+            list-style-type: none;
+            padding-left: unset;
+        }
+        nav ul li{
+            padding: 0 1rem;
+        }
+        nav ul li a{
+            text-decoration: none;
+        }
+        nav ul li:first-child a{
+            color:var(--primaryColor);
+        }
+        /* Bold */
+@font-face {
+    font-family: 'CircularStd-Bold';
+    src: url('./assets/fonts/CircularStd-Bold.woff2') format('woff2'),
+         url('./assets/fonts/CircularStd-Bold.woff') format('woff');
+    font-weight: 700; /* Semibold weight */
+    font-style: normal;
+}
+
+/* Book */
+@font-face {
+    font-family: 'CircularStd-Book';
+    src: url('./assets/fonts/CircularStd-Book.woff') format('woff2'),
+         url('./assets/fonts/CircularStd-Book.woff2') format('woff');
+    font-style: normal;     
+}
+
+/* Bold */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/fonts/mycustomfont-bold.woff2') format('woff2'),
+         url('/fonts/mycustomfont-bold.woff') format('woff');
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/fonts/mycustomfont-bold-italic.woff2') format('woff2'),
+         url('/fonts/mycustomfont-bold-italic.woff') format('woff');
+    font-weight: 700; /* Bold weight */
+    font-style: italic;
+}
+h1{
+    font-family: 'CircularStd-Bold';
+    font-weight: 700;
+}
+.bannerHeading{
+    font-size: 5rem;
+    position: relative;
+    z-index: 2;
+}
+.bannerHeading span::before{
+    content: url('./assets/images/Vector.svg');
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    z-index: -1;
+    animation: animateVector 1s ease-in forwards;
+    animation-delay: 3s;
+    transform-origin: left
+}
+@keyframes animateVector {
+    0% {
+        transform: translateX(0) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.col-lg-6{
+    max-width: 50%;
+}
+.col-lg-6{
+    max-width: 50%;
+}
+.my-auto{
+    margin: auto 0;
+}
+.mt-5{
+    margin-top: 3rem;
+}
+.mt-4{
+    margin-top: 1.5rem;
+}
+.my-4{
+    margin: 1.5rem 0;
+}
+.py-4{
+    padding: 1.5rem 0;
+}
+.pe-2{
+    padding-right: 0.75rem;
+}
+.bannerPara{
+    font-size: 1.25rem;
+    color: var(--grayColor);
+    font-family: 'CircularStd-Book';
+}
+label{
+    font-family: 'CircularStd-Book';
+}
+.active{
+    color:var(--primaryColor);
+}
+.bannerform .row{
+    border: 0.5px solid var(--borderColor);
+    padding: 1rem;
+    border-radius: 8px;
+}
+/* Remove calendar icon in Chrome, Edge, and Safari */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+/* Remove calendar icon in Firefox */
+input[type="date"]::-moz-calendar-picker-indicator {
+    opacity: 0;
+}
+
+/* Remove calendar icon in Internet Explorer */
+input[type="date"]::-ms-clear {
+    display: none;
+}
+.col-6{
+    max-width: 50%;
+    width: 50%;
+    padding: 0 10px;
+}
+.col-5{
+    max-width: 40%;
+    width: 40%;
+    padding: 0 10px;
+}
+.col-1{
+    width: 10%;
+    max-width: 10%;
+    padding: 10px;
+    align-items: start;
+}
+.row i{
+    color: var(--primaryColor);
+}
+.row label{
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+.row input{
+    padding: 0.5rem;
+    width: 100%;
+    font-family: 'CircularStd-Book';
+    border-color: var(--borderColor);
+    border-radius: 0.25rem;
+}
+#submitIcn{
+    background: var(--primaryColor);
+    padding: 0.75rem;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+}
+.dropdown{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.dropdown::after{
+    content: '\f0d7';
+    font-family: 'fontAwesome';
+    position: absolute;
+    right: 4px;
+    font-size: 11px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        
+            <div class="container">
+                <nav>
+                <a href="#">
+                    <img src="../assets/images/logo.svg"/>
+                </a>
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="">Packages</a>
+                        <div class="dropdown-menu">
+
+                        </div>
+                    </li>
+                    <li>FAQ</li>
+                    <li>Community</li>
+                </ul>
+                <div>
+                    <a href="#" class="loginBtn">Login</a>
+                    <a href="#" class="signBtn">Sign Up</a>
+                </div>
+            </nav>
+            </div>
+    </header>
+    <main>
+        <section>
+            <div class="container py-4">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6 my-auto">
+                        <h1 class="bannerHeading">Discover your favorite place <span>with us</span></h1>
+                        <p class="bannerPara my-4">Your journey begins here with our curated travel experiences. Discover new horizons, create lasting memories, and explore the world with our expertly crafted itineraries.</p>
+                        <form action="" method="POST" class="bannerform">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label><i class="fa-solid fa-map pe-2"></i>Locations</label><br/>
+                                    <input type="text" placeholder="e.g Bali, Indonasia"/>
+                                </div>
+                                <div class="col-5">
+                                    <label><i class="fa-solid fa-calendar-days pe-2"></i>Date & Time</label><br/>
+                                    <input type="date"/>
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa-solid fa-search" id="submitIcn" name="submitIcn" type="submit"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 my-auto">
+                        <figure>
+                            <img src="./assets/images/banner-image.png" class="img-fluid"/>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
