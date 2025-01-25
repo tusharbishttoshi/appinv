@@ -1,0 +1,55 @@
+<div class="container">
+         <h5 class="methodologicalHead pb-4" style="color:#032d60; font-weight:bold">Our Strategic Salesforce Implementation Approach for Proven Success</h5>
+      
+      <div class="row sfservicesApproachOverflowHome mx-auto" id="slider">
+         <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+            <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+				<h6>Discovery &amp; Requirement Gathering</h6>
+				<ul>
+					<li class="py-2">Conduct a brief analysis of business goals and challenges.</li>
+					<li class="py-2">Identify specific requirements to align with the company’s expectations.</li>
+				</ul>
+			 </div>
+         </div>
+         <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+            <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+				<h6>Tailored Solution Design</h6>
+				<ul>
+					<li class="py-2">Design workflows, automation, and integrations for streamlined operations.</li>
+					<li class="py-2">Prioritize scalability to ensure that the solution grows with business.</li>
+				</ul>
+			 </div>
+         </div>
+         <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+           <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+				<h6>Data Migration and Integration</h6>
+				<ul>
+					<li class="py-2">Ensure clean data migration from legacy systems.</li>
+					<li class="py-2">Integrate Salesforce with existing systems, like ERP.</li>
+				</ul>
+			 </div>
+         </div>
+         <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+           <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+				<h6>User Training and Adoption</h6>
+				<ul>
+					<li class="py-2">Give effective training for a smooth transition.</li>
+					<li class="py-2">Create an environment where users are encouraged to explore more.</li>
+				</ul>
+			 </div>
+         </div>
+         <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+           <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+				<h6>Ongoing Support &amp; Optimization</h6>
+				<ul>
+					<li class="py-2">Provide post-implementation support for a better user experience.</li>
+					<li class="py-2">Evaluate Salesforce performance regularly.</li>
+				</ul>
+			 </div> 
+         </div>
+      </div>
+	   <div class="pt-4 d-none d-md-flex flex-wrap justify-content-end">
+         <button class="slider-button left me-3" id="scrollLeft"><i class="fa-solid fa-arrow-left"></i></button>
+         <button class="slider-button right" id="scrollRight"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+   </div>

@@ -1,0 +1,16 @@
+/* Bold */
+@font-face {
+    font-family: 'CircularStd-Bold';
+    src: url('../fonts/CircularStd-Bold.woff2') format('woff2'),
+     url('../fonts/CircularStd-Bold.woff') format('woff');
+    font-weight: 700; /* Semibold weight */
+    font-style: normal;
+    }
+    
+    /* Book */
+    @font-face {
+    font-family: 'CircularStd-Book';
+    src: url('../fonts/CircularStd-Book.woff') format('woff2'),
+     url('../fonts/CircularStd-Book.woff2') format('woff');
+    font-style: normal;     
+    }

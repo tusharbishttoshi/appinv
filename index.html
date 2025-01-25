@@ -5,250 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <style>
-        :root{
-            --primaryColor: #35AFF4;
-            --grayColor: #909090;
-            --borderColor: rgba(144,144,144,0.3);
-        }
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .container{
-                max-width: 1320px;
-                margin: auto;
-            }
-        @media only screen and (min-width: 1400px) {
-            .container{
-                max-width: 1320px;
-            }
-        }
-        @media only screen and (max-width: 1200px) {
-            .container{
-                max-width: 1140px;
-            }
-        }
-        @media only screen and (max-width: 992px) {
-            .container{
-                max-width: 960px;
-            }
-        }
-        @media only screen and (max-width: 768px) {
-            .container{
-                max-width: 720px;
-            }
-        }
-        @media only screen and (max-width: 576px) {
-            .container{
-                max-width: 540px;
-            }
-        }
-        @media only screen and (max-width: 575px) {
-            .container{
-                max-width: 100%;
-            }
-        }
-        nav{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-            font-family: 'CircularStd-Book';
-        }
-        nav ul{
-            display: flex;
-            list-style-type: none;
-            padding-left: unset;
-        }
-        nav ul li{
-            padding: 0 1rem;
-        }
-        nav ul li a{
-            text-decoration: none;
-        }
-        nav ul li:first-child a{
-            color:var(--primaryColor);
-        }
-        /* Bold */
-@font-face {
-    font-family: 'CircularStd-Bold';
-    src: url('./assets/fonts/CircularStd-Bold.woff2') format('woff2'),
-         url('./assets/fonts/CircularStd-Bold.woff') format('woff');
-    font-weight: 700; /* Semibold weight */
-    font-style: normal;
-}
-
-/* Book */
-@font-face {
-    font-family: 'CircularStd-Book';
-    src: url('./assets/fonts/CircularStd-Book.woff') format('woff2'),
-         url('./assets/fonts/CircularStd-Book.woff2') format('woff');
-    font-style: normal;     
-}
-
-/* Bold */
-@font-face {
-    font-family: 'MyCustomFont';
-    src: url('/fonts/mycustomfont-bold.woff2') format('woff2'),
-         url('/fonts/mycustomfont-bold.woff') format('woff');
-    font-weight: 700; /* Bold weight */
-    font-style: normal;
-}
-
-/* Bold Italic */
-@font-face {
-    font-family: 'MyCustomFont';
-    src: url('/fonts/mycustomfont-bold-italic.woff2') format('woff2'),
-         url('/fonts/mycustomfont-bold-italic.woff') format('woff');
-    font-weight: 700; /* Bold weight */
-    font-style: italic;
-}
-h1{
-    font-family: 'CircularStd-Bold';
-    font-weight: 700;
-}
-.bannerHeading{
-    font-size: 5rem;
-    position: relative;
-    z-index: 2;
-}
-.bannerHeading span::before{
-    content: url('./assets/images/Vector.svg');
-    position: absolute;
-    bottom: -1rem;
-    left: 0;
-    z-index: -1;
-    animation: animateVector 1s ease-in forwards;
-    animation-delay: 3s;
-    transform-origin: left
-}
-@keyframes animateVector {
-    0% {
-        transform: translateX(0) scale(0);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0) scale(1);
-        opacity: 1;
-    }
-}
-.img-fluid{
-    max-width: 100%;
-    height: auto;
-}
-.row{
-    display: flex;
-    flex-wrap: wrap;
-}
-.justify-content-between{
-    justify-content: space-between;
-}
-.col-lg-6{
-    max-width: 50%;
-}
-.col-lg-6{
-    max-width: 50%;
-}
-.my-auto{
-    margin: auto 0;
-}
-.mt-5{
-    margin-top: 3rem;
-}
-.mt-4{
-    margin-top: 1.5rem;
-}
-.my-4{
-    margin: 1.5rem 0;
-}
-.py-4{
-    padding: 1.5rem 0;
-}
-.pe-2{
-    padding-right: 0.75rem;
-}
-.bannerPara{
-    font-size: 1.25rem;
-    color: var(--grayColor);
-    font-family: 'CircularStd-Book';
-}
-label{
-    font-family: 'CircularStd-Book';
-}
-.active{
-    color:var(--primaryColor);
-}
-.bannerform .row{
-    border: 0.5px solid var(--borderColor);
-    padding: 1rem;
-    border-radius: 8px;
-}
-/* Remove calendar icon in Chrome, Edge, and Safari */
-input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
-}
-
-/* Remove calendar icon in Firefox */
-input[type="date"]::-moz-calendar-picker-indicator {
-    opacity: 0;
-}
-
-/* Remove calendar icon in Internet Explorer */
-input[type="date"]::-ms-clear {
-    display: none;
-}
-.col-6{
-    max-width: 50%;
-    width: 50%;
-    padding: 0 10px;
-}
-.col-5{
-    max-width: 40%;
-    width: 40%;
-    padding: 0 10px;
-}
-.col-1{
-    width: 10%;
-    max-width: 10%;
-    padding: 10px;
-    align-items: start;
-}
-.row i{
-    color: var(--primaryColor);
-}
-.row label{
-    margin-bottom: 0.5rem;
-    display: inline-block;
-}
-.row input{
-    padding: 0.5rem;
-    width: 100%;
-    font-family: 'CircularStd-Book';
-    border-color: var(--borderColor);
-    border-radius: 0.25rem;
-}
-#submitIcn{
-    background: var(--primaryColor);
-    padding: 0.75rem;
-    color: #fff;
-    font-size: 1.5rem;
-    border-radius: 0.5rem;
-}
-.dropdown{
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.dropdown::after{
-    content: '\f0d7';
-    font-family: 'fontAwesome';
-    position: absolute;
-    right: 4px;
-    font-size: 11px;
-}
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/fonts.css"/>
 </head>
 <body>
     <header>
@@ -268,11 +26,34 @@ input[type="date"]::-ms-clear {
                     <li class="dropdown">
                         <a href="">Packages</a>
                         <div class="dropdown-menu">
-
+                            <ul>
+                                <li>
+                                    <a href="#">Goa Tour</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bali Tour</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pune Tour</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dubai Tour</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kerela Tour</a>
+                                </li>
+                                <li>
+                                    <a href="#">Himanchal Tour</a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
-                    <li>FAQ</li>
-                    <li>Community</li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Community</a>
+                    </li>
                 </ul>
                 <div>
                     <a href="#" class="loginBtn">Login</a>
@@ -303,16 +84,227 @@ input[type="date"]::-ms-clear {
                                 </div>
                             </div>
                         </form>
+                        <div class="socialMedia">
+                            Follow Us
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-lg-6 my-auto">
+                    <div class="col-lg-6 my-auto position-relative">
                         <figure>
                             <img src="./assets/images/banner-image.png" class="img-fluid"/>
                         </figure>
+                        <img src="./assets/images/stickers.svg" class="img-fluid scollImg">
+                        <div class="card BannerCard">
+                            <img src="./assets/images/destinationBanner.png" class="img-fluid pe-2"/>
+                            <div>
+                            <p>Coco De Haven</p>
+                            <p class="pt-3">Starts from <span>$</span><span>400</span></p>
+                        </div>
+                        <div class="pe-2">
+                            <i class="fa-solid fa-star"></i>(4.5)
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="travelPartnerSection py-5">
+            <div class="container">
+                <div class="travelPartnerSubSection">
+                    <h2>Our Travel Partner</h2>
+                <div class="row">
+                   <figure>
+                    <img src="./assets/images/traveloka-logo.svg"/>
+                   </figure>
+                   <figure>
+                    <img src="./assets/images/airbnb-logo.svg"/>
+                   </figure>
+                   <figure>
+                    <img src="./assets/images/expedia-logo.svg"/>
+                   </figure>
+                   <figure>
+                    <img src="./assets/images/skyscanner-logo.svg"/>
+                   </figure>
+                   <figure>
+                    <img src="./assets/images/american-airlines-logo.svg"/>
+                   </figure>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 popularDestination">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h3 class="display-5">
+                            Popular Destination
+                        </h3>
+                        <p class="mt-4">
+                            See our popular destinations that our client choose
+                        </p>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="pt-4 d-none d-md-flex flex-wrap justify-content-end">
+                            <button class="slider-button left me-3" id="scrollLeft"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button class="slider-button right" id="scrollRight"><i class="fa-solid fa-arrow-right"></i></button>
+                         </div>
+                    </div>
+                </div>
+                <div class="tourDestinantionCards" id="slider">
+                    <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+                       <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+                           <h6>Discovery &amp; Requirement Gathering</h6>
+                           <ul>
+                               <li class="py-2">Conduct a brief analysis of business goals and challenges.</li>
+                               <li class="py-2">Identify specific requirements to align with the company’s expectations.</li>
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+                       <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+                           <h6>Tailored Solution Design</h6>
+                           <ul>
+                               <li class="py-2">Design workflows, automation, and integrations for streamlined operations.</li>
+                               <li class="py-2">Prioritize scalability to ensure that the solution grows with business.</li>
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+                      <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+                           <h6>Data Migration and Integration</h6>
+                           <ul>
+                               <li class="py-2">Ensure clean data migration from legacy systems.</li>
+                               <li class="py-2">Integrate Salesforce with existing systems, like ERP.</li>
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+                      <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+                           <h6>User Training and Adoption</h6>
+                           <ul>
+                               <li class="py-2">Give effective training for a smooth transition.</li>
+                               <li class="py-2">Create an environment where users are encouraged to explore more.</li>
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 slideZConsultMethod h-auto">
+                      <div class="slideZConsultMethodCard rounded-4 p-4 h-100">
+                           <h6>Ongoing Support &amp; Optimization</h6>
+                           <ul>
+                               <li class="py-2">Provide post-implementation support for a better user experience.</li>
+                               <li class="py-2">Evaluate Salesforce performance regularly.</li>
+                           </ul>
+                        </div> 
+                    </div>
+                 </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
+    <script>
+        const slider = document.getElementById('slider');
+        const scrollLeftBtn = document.getElementById('scrollLeft');
+        const scrollRightBtn = document.getElementById('scrollRight');
+        const cardWidth = document.querySelector('.slideZConsultMethod').clientWidth;
+        let autoScrollInterval;
+        let numOfSlides;
+    
+        // Function to start the autoplay
+        function startAutoScroll() {
+            if (window.innerWidth > 767 && canScroll()) {
+                autoScrollInterval = setInterval(() => {
+                    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+                        slider.scrollTo({
+                            left: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        slider.scrollBy({
+                            left: cardWidth,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 2000);
+            }
+        }
+    
+        // Function to stop the autoplay
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+    
+        // Function to handle resize events
+        function handleResize() {
+            stopAutoScroll();
+            startAutoScroll();
+        }
+    
+        // Function to determine if the slider can scroll
+        function canScroll() {
+            return slider.scrollWidth > slider.clientWidth;
+        }
+    
+        // Event listeners for the scroll buttons
+        scrollLeftBtn.addEventListener('click', function () {
+            stopAutoScroll();
+            if (slider.scrollLeft === 0) {
+                slider.scrollTo({
+                    left: slider.scrollWidth,
+                    behavior: 'smooth'
+                });
+            } else {
+                slider.scrollBy({
+                    left: -cardWidth,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    
+        scrollRightBtn.addEventListener('click', function () {
+            stopAutoScroll();
+            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+                slider.scrollTo({
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                slider.scrollBy({
+                    left: cardWidth,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    
+        // Start autoplay initially if possible
+        startAutoScroll();
+    
+        // Pause autoplay on mouse hover
+        slider.addEventListener('mouseenter', stopAutoScroll);
+    
+        // Resume autoplay on mouse leave
+        slider.addEventListener('mouseleave', startAutoScroll);
+    
+        // Handle window resize to check for width changes
+        window.addEventListener('resize', handleResize);
+    
+        // Adjust initial scroll position for seamless looping
+        slider.scrollLeft = 0;
+    </script>
 </body>
 </html>

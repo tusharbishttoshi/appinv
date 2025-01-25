@@ -1,0 +1,364 @@
+:root{
+    --primaryColor: #35AFF4;
+    --grayColor: #909090;
+    --starColor: #F9B811;
+    --borderColor: rgba(144,144,144,0.3);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+        max-width: 1320px;
+        margin: auto;
+    }
+@media only screen and (min-width: 1400px) {
+    .container{
+        max-width: 1320px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .container{
+        max-width: 960px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .container{
+        max-width: 720px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .container{
+        max-width: 540px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .container{
+        max-width: 100%;
+    }
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    font-family: 'CircularStd-Book';
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    padding-left: unset;
+}
+nav ul li{
+    padding: 0 1rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s ease-in;
+}
+nav ul li a:hover{
+    color: var(--primaryColor);
+}
+nav ul li:first-child a{
+    color:var(--primaryColor);
+}
+
+h1,h2,h3,h4,h5,h6{
+font-family: 'CircularStd-Bold';
+font-weight: 700;
+}
+.bannerHeading{
+font-size: 5rem;
+position: relative;
+z-index: 2;
+}
+.bannerHeading span::before{
+content: url('../images/Vector.svg');
+position: absolute;
+bottom: -1rem;
+left: 0;
+z-index: -1;
+animation: animateVector 1s ease-in forwards;
+animation-delay: 3s;
+transform-origin: left
+}
+@keyframes animateVector {
+0% {
+transform: translateX(0) scale(0);
+opacity: 0;
+}
+100% {
+transform: translateX(0) scale(1);
+opacity: 1;
+}
+}
+.img-fluid{
+max-width: 100%;
+height: auto;
+}
+.row{
+display: flex;
+flex-wrap: wrap;
+}
+.justify-content-between{
+justify-content: space-between;
+}
+.col-lg-6{
+max-width: 50%;
+flex: 0 0 auto;
+}
+.col-lg-6{
+max-width: 50%;
+flex: 0 0 auto;
+}
+.my-auto{
+margin: auto 0;
+}
+.mt-5{
+margin-top: 3rem;
+}
+.mt-4{
+margin-top: 1.5rem;
+}
+.my-4{
+margin: 1.5rem 0;
+}
+.py-4{
+padding: 1.5rem 0;
+}
+.py-5{
+    padding: 3rem 0;
+    }
+.pe-2{
+padding-right: 0.75rem;
+}
+.bannerPara{
+font-size: 1.25rem;
+color: var(--grayColor);
+font-family: 'CircularStd-Book';
+}
+label{
+font-family: 'CircularStd-Book';
+}
+.active{
+color:var(--primaryColor);
+}
+.bannerform .row{
+border: 0.5px solid var(--borderColor);
+padding: 1rem;
+border-radius: 8px;
+}
+.bannerform .row input{
+border: 0.5px solid var(--borderColor);
+}
+.bannerform .row input::placeholder{
+color: var(--grayColor);
+}
+/* Remove calendar icon in Chrome, Edge, and Safari */
+input[type="date"]::-webkit-calendar-picker-indicator {
+opacity: 0.3;
+}
+
+/* Remove calendar icon in Firefox */
+input[type="date"]::-moz-calendar-picker-indicator {
+opacity: 0.3;
+}
+
+/* Remove calendar icon in Internet Explorer */
+input[type="date"]::-ms-clear {
+display: none;
+}
+.col-6{
+max-width: 50%;
+width: 50%;
+padding: 0 10px;
+flex: 0 0 auto;
+}
+.col-5{
+max-width: 40%;
+width: 40%;
+padding: 0 10px;
+flex: 0 0 auto;
+}
+.col-1{
+width: 10%;
+max-width: 10%;
+padding: 10px;
+align-items: start;
+flex: 0 0 auto;
+}
+.row i{
+color: var(--primaryColor);
+}
+.row label{
+margin-bottom: 0.5rem;
+display: inline-block;
+}
+.row input{
+padding: 0.5rem;
+width: 100%;
+font-family: 'CircularStd-Book';
+border-color: var(--borderColor);
+border-radius: 0.25rem;
+}
+#submitIcn{
+background: var(--primaryColor);
+padding: 0.75rem;
+color: #fff;
+font-size: 1.5rem;
+border-radius: 0.5rem;
+}
+.dropdown{
+position: relative;
+display: flex;
+align-items: center;
+}
+.dropdown::after{
+content: '\f107';
+font-family: 'fontAwesome';
+position: absolute;
+right: 4px;
+font-size: 11px;
+}
+.dropdown:hover > .dropdown-menu{
+display: block;
+}
+.dropdown-menu{
+display: none;
+position: absolute;
+top: 1.3rem;
+left: 0;
+width: 20vw;
+background: #fff;
+border: 0.5px solid var(--borderColor);
+padding: 1rem 0;
+border-radius: 0.25rem;
+}
+.dropdown-menu ul{
+display: grid!important;
+grid-template-columns: auto auto;
+}
+.dropdown-menu ul li{
+line-height: 1.5;
+}
+.dropdown-menu ul li a:first-child{
+color: #000;
+}
+.dropdown-menu ul li a:first-child:hover{
+color: var(--primaryColor);
+}
+.position-relative{
+position: relative;
+}
+.scollImg{
+position: absolute;
+right: 1.1rem;
+bottom: 1.1rem;
+}
+.card{
+background-color: #fff;
+filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.2));
+/* display: inline-block; */
+padding: 1rem;
+}
+.BannerCard{
+position: absolute;
+top: 2rem;
+display: flex;
+border-radius: 8px;
+justify-content: space-around;
+width: 55%;
+font-family: 'CircularStd-Book';
+}
+.BannerCard p+p{
+padding-top: 0.75rem;
+color: var(--grayColor);
+}
+.BannerCard p+p span{
+color: var(--primaryColor);
+}
+.BannerCard p+p span+span{
+color: #000;
+}
+.BannerCard i{
+color: var(--starColor)!important;
+font-size: 15px;
+padding-right: 0.25rem;
+}
+.socialMedia{
+display: flex;
+margin-top: 2rem;
+color: var(--grayColor);
+font-family: 'CircularStd-Book';
+font-size: 1.1rem;
+align-items: center;
+}
+.socialMedia ul{
+list-style-type: none;
+display: flex;
+margin-left: 1.5rem;
+}
+.socialMedia ul li a{
+background: var(--borderColor);
+padding: 1rem;
+margin-left: 1rem;
+width: 40px;
+height: 40px;
+border-radius: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+}
+.socialMedia ul li:first-child a{
+margin-left: 0;
+}
+.socialMedia ul li a i{
+color: var(--grayColor);
+}
+.travelPartnerSection h2{
+color: var(--grayColor);
+}
+.travelPartnerSubSection{
+    display: flex;
+    justify-content: space-between;
+}
+.travelPartnerSubSection figure{
+    margin: 0 1.5rem;
+}
+.display-5{
+    font-size: 2.5rem;
+}
+.popularDestination p{
+    font-family: 'CircularStd-Book';
+    font-size: 1.1rem;
+}
+.tourDestinantionCards{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.col-lg-4{
+    max-width: 33.33%;
+    flex: 0 0 auto;
+}
+.h-auto{
+    height: 100%;
+}
+.h-100{
+    height: 100%;
+}
+.col-lg-9{
+    width: 75%;
+    max-width: 75%;
+    flex: 0 0 auto;
+}
