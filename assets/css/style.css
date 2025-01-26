@@ -114,14 +114,23 @@ justify-content: space-between;
 .col-lg-6{
 max-width: 50%;
 flex: 0 0 auto;
+/* width: 50%; */
+}
+.w-50{
+    width: 50%;
+}
+.w-33{
+    width: 33%;
 }
 .col-lg-5{
     max-width: 45%;
     flex: 0 0 auto;
+    width: 45%;
 }
 .col-lg-7{
     max-width: 55%;
     flex: 0 0 auto;
+    width: 55%;
 }
 .col-lg-3{
 max-width: 25%;
@@ -286,7 +295,6 @@ bottom: 1.1rem;
 .card{
 background-color: #fff;
 filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.2));
-/* display: inline-block; */
 padding: 1rem;
 }
 .BannerCard{
@@ -337,6 +345,10 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-decoration: none;
+transition: 0.2s ease-in;
+}
+.socialMedia ul li a:hover{
+    background-color: var(--primaryColor);
 }
 .socialMedia ul li:first-child a{
 margin-left: 0;
@@ -344,6 +356,9 @@ margin-left: 0;
 .socialMedia ul li a i{
 color: var(--grayColor);
 }
+.socialMedia ul li a:hover i{
+    color: #fff;
+    }
 .travelPartnerSection h2{
 color: var(--grayColor);
 }
@@ -371,6 +386,7 @@ color: var(--grayColor);
 .col-lg-4{
     max-width: 33.33%;
     flex: 0 0 auto;
+    /* width: 33.33%; */
 }
 .h-auto{
     height: 100%;
@@ -588,4 +604,223 @@ color: var(--grayColor);
     background: var(--primaryColor);
     border-color: var(--primaryColor);
     color: #fff;
+}
+.withOurServ p{
+    font-family: 'CircularStd-Book';
+    color: var(--grayColor);
+}
+.withOurServ .btn{
+    border: 2px solid var(--primaryColor);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    display: inline-block;
+    font-family: 'CircularStd-Book';
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: var(--primaryColor);
+}
+.withOurServ .btn:hover{
+    background-color: transparent;
+    color: var(--primaryColor);
+}
+
+.BannerCardRight{
+    right: -3rem;
+}
+.BannerCardLeft{
+    left: -3rem;
+}
+.BannerCardRight div p:first-child{
+    color: #000!important;
+}
+.BannerCardServ{
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    border-radius: 50px;
+    justify-content: start;
+    width: 45%;
+    font-family: 'CircularStd-Book';
+
+    }
+    .BannerCardServ div p:first-child{
+        color: #000;
+        font-size: 1.3rem;
+    }
+    .BannerCardServ p+p{
+    padding-top: 0.75rem;
+    color: var(--grayColor);
+    }
+    .BannerCardServ p+p span{
+    color: var(--primaryColor);
+    }
+    .BannerCardServ p+p span+span{
+    color: #000;
+    }
+    .BannerCardServ i{
+    color: var(--starColor)!important;
+    font-size: 15px;
+    padding-right: 0.25rem;
+    }
+    .marqueue {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 500px; /* Adjust height as needed */
+        position: relative;
+        flex: 0 0 auto;
+      }
+      @keyframes marquee {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(-100%);
+        }
+      }
+      
+      @keyframes marquee-reverse {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(100%);
+        }
+      }
+      
+      /* Apply the same duration to all rows */
+      .middle-row {
+        animation: marquee-reverse 35s linear infinite; /* Adjust duration as needed */
+      }
+      
+      .rest-rows {
+        animation: marquee 20s linear infinite; /* Same duration for consistency */
+      }
+      
+.middle-row:hover, .rest-rows:hover{
+    animation-play-state: paused;
+} 
+.mb-4{
+    margin-bottom: 1.5rem;
+}
+.d-flex{
+    display: flex;
+}
+.marqueue p{
+    font-size: 1.1rem;
+    font-family: 'CircularStd-Book';
+}
+.rounded{
+    border-radius: 0.25rem;
+}
+.m-3{
+    margin: 1rem;
+}
+.p-4{
+    padding: 1.5rem;
+}
+.ps-3{
+    padding-left: 1rem;
+}
+.align-items-center{
+    align-items: center;
+}
+.clientDes p+p{
+    color: var(--grayColor);
+}
+.mt-2{
+    margin-top: 0.5rem;
+}
+.quote{
+    color: var(--grayColor);
+}
+.primaryBg{
+    background-color: var(--primaryColor);
+    background-image: url('../images/placeholder.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+.newslettertxt{
+    /* text-align: center; */
+    color: #fff;
+    font-family: 'circularStd-Book'!important;
+
+}
+.primaryBg p{
+    color: #fff;
+    font-family: 'circularStd-Book';
+}
+.primaryBg input{
+    width: 70%;
+    border: 0;
+    padding-inline-start: 2rem;
+}
+.icon{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+footer{
+    background: #181818;
+    padding: 3rem;
+}
+footer p{
+    color: #fff;
+    font-family: 'circularStd-Book';
+    margin-top: 1.5rem;
+    padding-right: 20px;
+    font-size: 1.23rem;
+}
+footer ul{
+    list-style-type: none;
+    margin-top: 1rem;
+}
+footer ul li{
+    line-height: 1.5;
+    font-family: 'circularStd-Book';
+}
+footer ul li a, footer ul li a i{
+    color: #fff !important;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+}
+footer ul li a:hover, footer ul li a:hover i{
+    color: var(--primaryColor)!important;
+}
+.lowerFooter{
+    color: #fff;
+    border-top: 1px solid var(--grayColor);
+    padding-top: 3rem;
+    margin-top: 5rem;
+    font-family: 'circularStd-Book';
+}
+.lowerFooter .col-lg-4{
+    width: 30%;
+    max-width: 30%;
+    flex: 0 0 auto;
+}
+.lowerFooter .col-lg-8{
+    width: 70%;
+    max-width: 70%;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content:  end;
+    
+}
+.lowerFooter ul{
+    display: flex;
+    justify-content: end;
+}
+.lowerFooter ul li{
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+.lowerFooter ul li:last-child{
+    margin-right: 0;
+}
+.lowerFooter ul li a{
+    text-decoration: underline!important;
 }
